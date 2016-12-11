@@ -1,4 +1,5 @@
 <?php
+require '../dao/connectToDB.php'
 class Account{
 	public $id;
 	public $acname;
@@ -13,5 +14,10 @@ class Account{
 		$this->email=$email;
 		$this->createtime=$createtime;
 	}
+	public addAccount($acname,$password,$tel,$email,$createtime){
+		$createtime=date(DATE_COOKIE);
+		$str="insert into account";
+	}
+	
 }
 ?>
